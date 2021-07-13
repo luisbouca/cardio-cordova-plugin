@@ -37,6 +37,8 @@ typedef enum {
         NSNumber* requirePostalCode = [command.arguments objectAtIndex:2] ;
         
         CardIOPaymentViewController* paymentVC = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
+
+        paymentVC.hideCardIOLogo = YES;
         
         if(requireExpiry)
             paymentVC.collectExpiry = [requireExpiry boolValue];
